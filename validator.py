@@ -6,6 +6,15 @@ import urllib2
 import inspect
 from bs4 import BeautifulSoup
 
+
+def _save_results_page(filename):
+	with open(filename, 'wb') as f:
+		f.write(response.read())
+
+def _load_results_to_soup(filename):
+	with open('valid.html', 'rb') as f:
+		return BeautifulSoup(f.read())
+
 def post_html_to_validator(html_file):
 	url = 'http://validator.w3.org/check'
 
@@ -19,15 +28,6 @@ def post_html_to_validator(html_file):
 	payload = urllib.urlencode(params)
 	req = urllib2.Request(url, data=payload)
 	return urllib2.urlopen(req)
-
-# with open('invalid.html', 'wb') as f:
-# 	f.write(response.read())
-
-# with open('valid.html', 'rb') as f:
-# 	soup = BeautifulSoup(f.read())
-
-with open('invalid.html', 'rb') as f:
-	soup = BeautifulSoup(f.read())
 
 def is_valid(soup):
 	result = soup.find('h2', {'class':'valid'}) 
@@ -50,10 +50,6 @@ def get_file_list(files = None, directory=os.getcwd()):
 		if '.html' in i: #eventually support css
 			files.append(os.path.abspath(directory) + '\\' + i)
 	return files
-
-# print '\n'.join(get_file_list())
-# get_file_list(files)
-
 
 if __name__ == '__main__':
 	if len(sys.argv) > 1:
