@@ -6,7 +6,7 @@ One-click HTML validation for all files in your project folder
 Auto-validate loops through your project folder and submits all HTML files to 
 the W3C Markup Service for compliance validation. Useful if you have a ton of 
 html that you need to check quickly. An errors with be displayed in the command 
-prompt, or optionally pretty printed to a webpage on your local machine. 
+prompt, or optionally pretty printed to a webpage on your local machine (TODO). 
 
 
 ##Dependenices  
