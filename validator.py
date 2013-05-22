@@ -1,3 +1,13 @@
+'''
+Quick script to validate all the HTML files in current directory
+via the W3C validator. 
+
+Current profesor gives zeros for non-validating html... this 
+provides a bit of quick, easy final assurance before project 
+submittal.
+'''
+
+
 import os
 import sys
 import time
@@ -76,3 +86,4 @@ if __name__ == '__main__':
 			print error
 		print 
 		time.sleep(.6)
+	user_wait = raw_input("Press any key to exit. ")
