@@ -5,13 +5,14 @@ One-click HTML/CSS validation for all files in your project folder
 
 Auto-validate loops through your project folder and submits all HTML files to 
 the W3C Markup Service for compliance validation. Useful if you have a ton of 
-html that you need to check quickly. An errors with be displayed in the command 
-prompt, or optionally pretty printed to a webpage on your local machine (TODO). 
+html that you need to check quickly. Any errors with be displayed in the command 
+prompt.
 
 
 ##Dependenices  
 
 * BeautifulSoup 
+* Mechanize
 
 ------------------------------------------------------  
 
@@ -19,7 +20,7 @@ prompt, or optionally pretty printed to a webpage on your local machine (TODO).
 
 AutoValidate can be used in a couple different ways:
 
-- **Need to check one html file?**  
+- **Need to check one html or css file?**  
 Drag and drop it onto auto-validate.py (or .exe) for a quick check.  
 
 - **Prefer the Command Line?**  
