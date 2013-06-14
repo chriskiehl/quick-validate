@@ -1,7 +1,7 @@
-auto-validate
+quick-validate
 =============
 
-One-click HTML validation for all files in your project folder
+One-click HTML/CSS validation for all files in your project folder
 
 Auto-validate loops through your project folder and submits all HTML files to 
 the W3C Markup Service for compliance validation. Useful if you have a ton of 
